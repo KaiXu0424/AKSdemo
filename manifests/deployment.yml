@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: kaixuaksdemo 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: kaixuaksdemo 
+    spec:
+      containers:
+        - name: kaixuaksdemo 
+          image: aksdemo5621.azurecr.io/kaixuaksdemo
+          ports:
+          - containerPort: 80
